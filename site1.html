@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mrindustrysite</title>
+  <style>
+    /* General Styles */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* Disable scrolling */
+      font-family: Menlo Regular, sans-serif;
+      font-size: 16px;
+      background: rgb(255, 255, 255);
+      color: rgb(13, 13, 13); /* 95% black */
+    }
+
+    /* Split Layout */
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Left Navigation Panel (33%) */
+    .nav-panel {
+      width: 33%;
+      padding: 40px 40px 0 0;
+    /*  border-right: 2px solid rgb(13, 13, 13); */
+    }
+
+    .nav-panel h1 {
+      font-size: calc(16px * 1.618); /* Golden ratio for h1 */
+      margin: 0 0 20px 0;
+      text-align: right;
+      cursor: pointer;
+    }
+
+    .nav-panel h1:hover {
+      text-decoration: underline;
+    }
+
+    .nav-panel ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: right;
+    }
+
+    .nav-panel ul li {
+      margin: 5px 0;
+      
+    }
+
+    .nav-panel ul li a {
+      text-decoration: none;
+      display: inline-block;
+      color: rgb(13, 13, 13);
+      font-size: calc(16px); /* Golden ratio for nav links */
+    }
+
+    .nav-panel ul li a:hover {
+      color: #0000EE; /* Default hyperlink blue */
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      margin: 40px 0;
+      text-align: right;
+    }
+
+    .social-icons a {
+      display: block;
+      margin: 5px 0;
+      color: #0000EE;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      text-decoration: underline;
+    }
+
+    /* Right Content Panel (66%) */
+    .content-panel {
+      width: 66%;
+      padding: 40px 240px 0 0;
+    }
+
+    .content-panel h2 {
+      font-size: calc(16px * 1.618); /* Golden ratio for h2 */
+      margin: 0 0 20px 0;
+    }
+
+    .content-panel p {
+      font-size: 16px;
+      padding: 0;
+      margin: 0;
+      text-align: justify;
+    }
+    .homepage-image {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      display: block;
+    }
+
+/* Buffer Panel 
+    .buffer-panel {
+      width: 16%;
+      padding: 40px 40px 0 0;
+    } */
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Navigation Panel -->
+    <div class="nav-panel">
+      <h1 onclick="showTab('home')">MR. INDUSTRY</h1>
+      <ul>
+        <li><a href="#about" onclick="showTab('about')">ABOUT</a></li>
+        <li><a href="#music" onclick="showTab('music')">MUSIC</a></li>
+        <li><a href="#videos" onclick="showTab('videos')">VIDEOS</a></li>
+        <li><a href="#tour-dates" onclick="showTab('tour dates')">TOUR DATES</a></li>
+        <li><a href="#merch" onclick="showTab('merch')">MERCH</a></li>
+        <li><a href="#contact" onclick="showTab('contact')">CONTACT</a></li>
+      </ul>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/mrindustryband">instagram</a>
+        <a href="https://www.facebook.com/mrindustrytheband">facebook</a>
+        <a href="https://mrindustry.bandcamp.com">bandcamp</a>
+        <a href="https://open.spotify.com/artist/1f54TbeSTNRvEAA4vZL7Ok?si=Lo_aP4AgR3unj29H-gForQ">spotify</a>
+        <a href="https://www.youtube.com/channel/UCds5AyJqOjc7zgl--86yNjQ">youtube</a>
+        <a href="https://linktr.ee/mr.industry">linktree</a>
+      </div>
+    </div>
+    
+
+    <!-- Right Content Panel -->
+    <div class="content-panel" id="content-panel">
+      <div id="home" class="tab-content">
+        <img src="/Users/charlie/Documents/_MR. INDUSTRY/PRESS SIZES/landscape1.jpeg" alt="Band Image" class="homepage-image">
+      </div>
+      <h2 id="tab-title"></h2>
+      <div id="about" class="tab-content" style="display: none;">
+        <p>Naarm/Melbourne based indie alternative/post-punk</p>
+      </div>
+      <div id="music" class="tab-content" style="display: none;">
+        <p>15.11.2024 Grow Kit</p>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6BRo8a2zklpF3CZncvpgpT?utm_source=generator&theme=0" width="50%" height="315" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+      <div id="videos" class="tab-content" style="display: none;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/37LH06noSuI?si=UYCOOfvVapat4EPZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div id="tour dates" class="tab-content" style="display: none;">
+        <div id="seated-55fdf2c0" data-artist-id="e736b2c7-641a-4713-beee-fb18824d15e5" data-css-version="3"></div><script src="https://widget.seated.com/app.js"></script>
+      </div>
+      <div id="merch" class="tab-content" style="display: none;">
+        <p>This is the Merch section. Add your merchandise here.</p>
+      </div>
+      <div id="contact" class="tab-content" style="display: none;">
+        <a href="mailto:mrindustryband@gmail.com">mrindustryband@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to switch tabs
+    function showTab(tabName) {
+      // Hide all tab content
+      const tabContents = document.querySelectorAll('.tab-content');
+      tabContents.forEach(tab => tab.style.display = 'none');
+
+      // Show the selected tab content
+      document.getElementById(tabName).style.display = 'block';
+
+      // Update the tab title
+      const tabTitle = document.getElementById('tab-title');
+      if (tabName === 'home') {
+        tabTitle.style.display = 'none';
+      } else {
+      tabTitle.style.display = 'block';
+      document.getElementById('tab-title').textContent = tabName.toUpperCase();
+      }
+   }
+  </script>
+</body>
+</html>
