@@ -56,19 +56,22 @@
       object-fit: contain;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       width: 100%;
     }
 
     .nav-panel ul {
-      list-style: none;
-      padding: 0px;
-      margin: 0px;
-      text-align: center;
+            list-style: none; /* Remove default bullets */
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+            justify-content: center; /* Center items horizontally */
+            gap: 5px 26px; /* Space between items */
     }
 
     .nav-panel ul li {
-     margin: 0 26px;
+            padding: 0px 0px;
       display: inline;
       
     }
@@ -84,13 +87,15 @@
     }
 
     .social-links {
-       text-align: center;
-       margin: 0 0 40px 0;
+                   display: flex;
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+            justify-content: center; /* Center items horizontally */
+            gap: 5px 26px; /* Space between items */
     }
 
     .social-links a {
+      margin: 20px 0 20px 0;
       display: inline;
-      margin: 5px 20px;
       color: #0000EE;
       text-decoration: none;
     }
