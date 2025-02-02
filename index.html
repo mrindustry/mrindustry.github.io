@@ -3,59 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mr. Industry | Official Site</title>
+  <title>mrindustrysite</title>
   <style>
     /* General Styles */
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden; /* Disable scrolling */
-      font-family: Menlo Regular, sans-serif;
+ /*     overflow: hidden;  Disable scrolling */
+      font-family: Menlo Regular, serif;
       font-size: 16px;
       background: rgb(255, 255, 255);
-      color: rgb(13, 13, 13); /* 95% black */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: rgb(13, 13, 13);  /*95% black */
     }
 
-    /* Split Layout */
+    /* Split Layout 
     .container {
       display: flex;
       height: 100vh;
-    }
+    } */
 
-    /* Left Navigation Panel (33%) */
+    /* top Navigation Panel (33%) */
     .nav-panel {
-      width: 25%;
-      padding: 40px 40px 0 0;
-   /*   border-right: 2px solid rgb(13, 13, 13); */
+    
+      width: 100%;
+      padding: 45px 0px 0 0;
+    /*  border-right: 2px solid rgb(13, 13, 13); */
     }
 
     .nav-panel h1 {
-      font-size: calc(16px * 1.618); /* Golden ratio for h1 */
-      margin: 0 0 20px 0;
-      text-align: right;
+      font-size: calc(16px); /*   * 1.618 Golden ratio for h1 */
+      margin: 0 0 45px 0;
+      text-decoration: none;
+      letter-spacing: 4px;
+      text-align: center;
       cursor: pointer;
+      color: rgb(13, 13, 13);
     }
 
     .nav-panel h1:hover {
       text-decoration: underline;
     }
 
+    .homepage-image {
+      height: auto;
+      max-width: 720px;
+      display: block;
+      object-fit: contain;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
     .nav-panel ul {
       list-style: none;
-      padding: 0;
-      margin: 0;
-      text-align: right;
+      padding: 0px;
+      margin: 0px;
+      text-align: center;
     }
 
     .nav-panel ul li {
-      margin: 5px 0;
+     margin: 0 26px;
+      display: inline;
       
     }
 
     .nav-panel ul li a {
-      text-decoration: none;
-      display: inline-block;
       color: rgb(13, 13, 13);
       font-size: calc(16px); /* Golden ratio for nav links */
     }
@@ -65,93 +83,81 @@
       text-decoration: underline;
     }
 
-    .social-icons {
-      margin: 40px 0;
-      text-align: right;
+    .social-links {
+       text-align: center;
+       margin: 0 0 40px 0;
     }
 
-    .social-icons a {
-      display: block;
-      margin: 5px 0;
+    .social-links a {
+      display: inline;
+      margin: 5px 20px;
       color: #0000EE;
       text-decoration: none;
     }
 
-    .social-icons a:hover {
+    .social-links a:hover {
       text-decoration: underline;
     }
 
     /* Right Content Panel (66%) */
     .content-panel {
-      width: 50%;
-      padding: 40px 40px 0 0;
+      flex: 1;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 720px;
+      width: 100%;
+      padding: 40px 0px 0 0;
     }
 
     .content-panel h2 {
-      font-size: calc(16px * 1.618); /* Golden ratio for h2 */
+      font-size: calc(16px); /*  * 1.618 Golden ratio for h2 */
       margin: 0 0 20px 0;
+      letter-spacing: 4px;
+      text-align: left;
     }
 
     .content-panel p {
       font-size: 16px;
       padding: 0;
       margin: 0;
-      text-align: justify;
-    }
-    .homepage-image {
-      width: 100%;
-      max-width: 1200px;
-      height: auto;
-      display: block;
+      text-align: left;
     }
 
-   /* Buffer Panel */
-    .buffer-panel {
-      width: 25%;
-      padding: 40px 40px 0 0;
-    } 
 
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Left Navigation Panel -->
-    <div class="nav-panel">
-      <h1 onclick="showTab('home')">MR. INDUSTRY</h1>
+
+  <div class="nav-panel">
+      <h1>MR. INDUSTRY</h1>
+<img src="/Users/charlie/Documents/_MR. INDUSTRY/PRESS SIZES/landscape1.jpeg" alt="Band Image" class="homepage-image">
+      
+
       <ul>
-        <li><a href="#about" onclick="showTab('about')">ABOUT</a></li>
-        <li><a href="#music" onclick="showTab('music')">MUSIC</a></li>
-        <li><a href="#videos" onclick="showTab('videos')">VIDEOS</a></li>
-        <li><a href="#tour-dates" onclick="showTab('tour dates')">TOUR DATES</a></li>
-        <li><a href="#merch" onclick="showTab('merch')">MERCH</a></li>
-        <li><a href="#contact" onclick="showTab('contact')">CONTACT</a></li>
+        <li>&#8227;<a href="#about" onclick="showTab('about')">ABOUT</a></li>
+        <li>&#8227;<a href="#music" onclick="showTab('music')">MUSIC</a></li>
+        <li>&#8227;<a href="#videos" onclick="showTab('videos')">VIDEOS</a></li>
+        <li>&#8227;<a href="#tour-dates" onclick="showTab('tour dates')">TOUR DATES</a></li>
+        <li>&#8227;<a href="#merch" onclick="showTab('merch')">MERCH</a></li>
+        <li>&#8227;<a href="#contact" onclick="showTab('contact')">CONTACT</a></li>
       </ul>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/mrindustryband">instagram</a>
-        <a href="https://www.facebook.com/mrindustrytheband">facebook</a>
-        <a href="https://mrindustry.bandcamp.com">bandcamp</a>
-        <a href="https://open.spotify.com/artist/1f54TbeSTNRvEAA4vZL7Ok?si=Lo_aP4AgR3unj29H-gForQ">spotify</a>
-        <a href="https://www.youtube.com/channel/UCds5AyJqOjc7zgl--86yNjQ">youtube</a>
-        <a href="https://linktr.ee/mr.industry">linktree</a>
-      </div>
     </div>
     
 
     <!-- Right Content Panel -->
     <div class="content-panel" id="content-panel">
       <div id="home" class="tab-content">
-        <img src="https://github.com/mrindustry/mrindustry.github.io/blob/main/100015260010.jpeg?raw=true" alt="Band Image" class="homepage-image">
       </div>
       <h2 id="tab-title"></h2>
       <div id="about" class="tab-content" style="display: none;">
         <p>Naarm/Melbourne based indie alternative/post-punk</p>
       </div>
       <div id="music" class="tab-content" style="display: none;">
-        <p>15.11.2024 Grow Kit</p>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6BRo8a2zklpF3CZncvpgpT?utm_source=generator&theme=0" width="50%" height="315" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p> </p>
+        <iframe style="border-radius:0px" src="https://open.spotify.com/embed/track/6BRo8a2zklpF3CZncvpgpT?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div id="videos" class="tab-content" style="display: none;">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/37LH06noSuI?si=UYCOOfvVapat4EPZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="100%" height="405" src="https://www.youtube.com/embed/37LH06noSuI?si=UYCOOfvVapat4EPZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <div id="tour dates" class="tab-content" style="display: none;">
         <div id="seated-55fdf2c0" data-artist-id="e736b2c7-641a-4713-beee-fb18824d15e5" data-css-version="3"></div><script src="https://widget.seated.com/app.js"></script>
@@ -162,8 +168,20 @@
       <div id="contact" class="tab-content" style="display: none;">
         <a href="mailto:mrindustryband@gmail.com">mrindustryband@gmail.com</a>
       </div>
-    </div>
   </div>
+
+    <footer>
+      <div class="footer-content">
+      <div class="social-links">
+        <a href="https://www.instagram.com/mrindustryband">instagram</a>
+        <a href="https://www.facebook.com/mrindustrytheband">facebook</a>
+        <a href="https://mrindustry.bandcamp.com">bandcamp</a>
+        <a href="https://open.spotify.com/artist/1f54TbeSTNRvEAA4vZL7Ok?si=Lo_aP4AgR3unj29H-gForQ">spotify</a>
+        <a href="https://www.youtube.com/channel/UCds5AyJqOjc7zgl--86yNjQ">youtube</a>
+        <a href="https://linktr.ee/mr.industry">linktree</a>
+      </div>
+      </div>
+    </footer>
 
   <script>
     // Function to switch tabs
