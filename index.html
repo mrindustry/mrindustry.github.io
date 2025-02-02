@@ -123,6 +123,24 @@
       text-align: left;
     }
 
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width * 100) */
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* Iframe styling */
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove iframe border */
+        }
+
 
   </style>
 </head>
@@ -157,7 +175,14 @@
         <iframe style="border-radius:0px" src="https://open.spotify.com/embed/track/6BRo8a2zklpF3CZncvpgpT?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
       <div id="videos" class="tab-content" style="display: none;">
-        <iframe width="100%" height="405" src="https://www.youtube.com/embed/37LH06noSuI?si=UYCOOfvVapat4EPZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/37LH06noSuI?si=UYCOOfvVapat4EPZ"
+            title="Grow Kit"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+        ></iframe>
+    </div>
       </div>
       <div id="tour dates" class="tab-content" style="display: none;">
         <div id="seated-55fdf2c0" data-artist-id="e736b2c7-641a-4713-beee-fb18824d15e5" data-css-version="3"></div><script src="https://widget.seated.com/app.js"></script>
